@@ -7,14 +7,16 @@ function or(a, b) {
   } else if (a == !true && b == !true) {
     return false;
   }
-  return;
 }
 
 //and: should return true only if both a and b are truthy
 function and(a, b) {
-  return;
+  if (!!a && !!b) {
+    return true;
+  } else {
+    return false;
+  }
 }
-
 module.exports = {
   or,
   and,
